@@ -1,0 +1,15 @@
+1. The four commands I used in the "Compiling and Assembling" section were:
+	`gcc -Wall -Wpendantic -std=c17 -march=haswell -c array_sum.S`
+	`gcc -Wall -Wpendantic -std=c17 -march=haswell -c array_sum_speed.c`
+	`gcc array_sum.o array_speed.o -o sum_1.out`
+	`./sum_1.out 1000000`
+
+2. The first command I used to complie `array_sum.c` was:
+	`gcc -Wall -Wpedantic -std=c17 -march=Haswell -c array_sum.c`
+The provided assembly implementation tooks about 0.243ms after the first few runs.
+My C implementation without -O3 tooks about 1.394ms. Therefore, the unoptimized C implementation was about 5.8 times slower than the provided assembly implementation.
+
+3. After adding `-O3`, the command was:
+	`gcc -Wall -Wpedantic -std=c17 -march=haswell -O3 -c array_sum.c`
+with `-O3`, my C implementation tooks about 0.059ms after first few runs. That was much faster than the provided assembly implementation, which tooks about 0.243ms.
+Compared with the unoptimized C version, the `-O3` version was about 23.6 times faster.
