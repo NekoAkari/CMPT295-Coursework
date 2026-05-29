@@ -1,0 +1,5 @@
+1. The do_something function returns the smallest perfect square that is strictly greater than the input value. In the original version, it returned the smallest perfect square greater than or equal to the input value. For example, after the modification, if the input is 64, the function returns 81 instead of 64.
+
+2. In my calculate function, I used call-preserved registers such as `%rbx` and `%r12`-`%r15` to store values that need to survive across calls of `f`, including the original `x` and the partial results a, b, c, and d. Since these registers must be preserved for the caller, I saved them with push at the beginning of calculate and restored them with pop before returning.
+
+I also used a non-preserved register `%r10` before calling `f` to demonstrate how caller-saved registers work. Since `f` destroys non-preserved registers, I saved the value of call. This shows that if a value in a non-preserved register is needed after a function call, the caller must save it manually.
