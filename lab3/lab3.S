@@ -33,7 +33,7 @@ power2_loop:
 	jmp power2_loop	#repeat
 
 power2_done:
-	pop %r13		# restore saved register
+	pop %r13	# restore saved register
 	pop %r12
 	pop %rbx
 	ret
@@ -49,9 +49,9 @@ hail_loop:
 
 	mov %rdi, %rcx	# cp n into rcx for check
 	and $1, %rcx	# check lowest of n
-	jz hail_even 	# if n is even (lowest == 0)
+	jz hail_even 	# if n is even (lowest == 0), jump to `hail_even`
 
-hail_odd:
+hail_odd:		# if odd, cont.
 	imul $3, %rdi	# n = 3 * n 
 	add $1, %rdi	# n = 3 * n + 1
 	jmp hail_loop	# cont. loop
