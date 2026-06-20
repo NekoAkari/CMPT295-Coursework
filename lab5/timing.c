@@ -44,7 +44,6 @@ int main() {
     //overhead = elapsed;
 
     CODE_TEST(polynomial1(3,2,7,-1,2));
-    /*
     CODE_TEST(polynomial2(3,2,7,-1,2));
     CODE_TEST(polynomial3(3,2,7,-1,2));
 
@@ -55,6 +54,6 @@ int main() {
     CODE_TEST(mul1(123));
     CODE_TEST(mul2(123));
     CODE_TEST(mul3(123));
-	*/
+
     return 0;
 }
