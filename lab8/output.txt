@@ -1,0 +1,348 @@
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ gcc -Wall -Wpedantic -std=c17 -march=haswell -O3     array-2d.c -o a_row
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_row 4096
+Array size: 32kB
+Calculated 1.71216 in     0.01ms on 1*4096 array.
+Calculated 1.71216 in     0.00ms on 2*2048 array.
+Calculated 1.71216 in     0.00ms on 4*1024 array.
+Calculated 1.71216 in     0.00ms on 8*512 array.
+Calculated 1.71216 in     0.00ms on 16*256 array.
+Calculated 1.71216 in     0.00ms on 32*128 array.
+Calculated 1.71216 in     0.00ms on 64*64 array.
+Calculated 1.71216 in     0.00ms on 128*32 array.
+Calculated 1.71216 in     0.00ms on 256*16 array.
+Calculated 1.71216 in     0.00ms on 512*8 array.
+Calculated 1.71216 in     0.00ms on 1024*4 array.
+Calculated 1.71216 in     0.00ms on 2048*2 array.
+Calculated 1.71216 in     0.00ms on 4096*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_row 32768
+Array size: 256kB
+Calculated -53.4191 in     0.04ms on 1*32768 array.
+Calculated -53.4191 in     0.02ms on 2*16384 array.
+Calculated -53.4191 in     0.02ms on 4*8192 array.
+Calculated -53.4191 in     0.02ms on 8*4096 array.
+Calculated -53.4191 in     0.02ms on 16*2048 array.
+Calculated -53.4191 in     0.02ms on 32*1024 array.
+Calculated -53.4191 in     0.02ms on 64*512 array.
+Calculated -53.4191 in     0.02ms on 128*256 array.
+Calculated -53.4191 in     0.02ms on 256*128 array.
+Calculated -53.4191 in     0.02ms on 512*64 array.
+Calculated -53.4191 in     0.02ms on 1024*32 array.
+Calculated -53.4191 in     0.02ms on 2048*16 array.
+Calculated -53.4191 in     0.02ms on 4096*8 array.
+Calculated -53.4191 in     0.02ms on 8192*4 array.
+Calculated -53.4191 in     0.02ms on 16384*2 array.
+Calculated -53.4191 in     0.02ms on 32768*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_row 262144
+Array size: 2048kB
+Calculated 2.17804 in     0.32ms on 1*262144 array.
+Calculated 2.17804 in     0.16ms on 2*131072 array.
+Calculated 2.17804 in     0.10ms on 4*65536 array.
+Calculated 2.17804 in     0.10ms on 8*32768 array.
+Calculated 2.17804 in     0.10ms on 16*16384 array.
+Calculated 2.17804 in     0.10ms on 32*8192 array.
+Calculated 2.17804 in     0.10ms on 64*4096 array.
+Calculated 2.17804 in     0.10ms on 128*2048 array.
+Calculated 2.17804 in     0.10ms on 256*1024 array.
+Calculated 2.17804 in     0.10ms on 512*512 array.
+Calculated 2.17804 in     0.10ms on 1024*256 array.
+Calculated 2.17804 in     0.10ms on 2048*128 array.
+Calculated 2.17804 in     0.10ms on 4096*64 array.
+Calculated 2.17804 in     0.10ms on 8192*32 array.
+Calculated 2.17804 in     0.10ms on 16384*16 array.
+Calculated 2.17804 in     0.10ms on 32768*8 array.
+Calculated 2.17804 in     0.10ms on 65536*4 array.
+Calculated 2.17804 in     0.10ms on 131072*2 array.
+Calculated 2.17804 in     0.10ms on 262144*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_row 5120000
+Array size: 40000kB
+Calculated -42.7861 in     3.41ms on 1*5120000 array.
+Calculated -42.7861 in     2.92ms on 2*2560000 array.
+Calculated -42.7861 in     2.61ms on 4*1280000 array.
+Calculated -42.7861 in     2.46ms on 5*1024000 array.
+Calculated -42.7861 in     2.33ms on 8*640000 array.
+Calculated -42.7861 in     2.29ms on 10*512000 array.
+Calculated -42.7861 in     2.35ms on 16*320000 array.
+Calculated -42.7861 in     2.35ms on 20*256000 array.
+Calculated -42.7861 in     2.29ms on 25*204800 array.
+Calculated -42.7861 in     2.47ms on 32*160000 array.
+Calculated -42.7861 in     2.41ms on 40*128000 array.
+Calculated -42.7861 in     2.19ms on 50*102400 array.
+Calculated -42.7861 in     2.30ms on 64*80000 array.
+Calculated -42.7861 in     2.36ms on 80*64000 array.
+Calculated -42.7861 in     2.36ms on 100*51200 array.
+Calculated -42.7861 in     2.50ms on 125*40960 array.
+Calculated -42.7861 in     2.47ms on 128*40000 array.
+Calculated -42.7861 in     2.42ms on 160*32000 array.
+Calculated -42.7861 in     2.31ms on 200*25600 array.
+Calculated -42.7861 in     2.29ms on 250*20480 array.
+Calculated -42.7861 in     2.44ms on 256*20000 array.
+Calculated -42.7861 in     2.70ms on 320*16000 array.
+Calculated -42.7861 in     2.63ms on 400*12800 array.
+Calculated -42.7861 in     2.63ms on 500*10240 array.
+Calculated -42.7861 in     2.41ms on 512*10000 array.
+Calculated -42.7861 in     2.31ms on 625*8192 array.
+Calculated -42.7861 in     2.29ms on 640*8000 array.
+Calculated -42.7861 in     2.38ms on 800*6400 array.
+Calculated -42.7861 in     2.34ms on 1000*5120 array.
+Calculated -42.7861 in     2.41ms on 1024*5000 array.
+Calculated -42.7861 in     2.38ms on 1250*4096 array.
+Calculated -42.7861 in     2.40ms on 1280*4000 array.
+Calculated -42.7861 in     2.33ms on 1600*3200 array.
+Calculated -42.7861 in     2.29ms on 2000*2560 array.
+Calculated -42.7861 in     2.44ms on 2048*2500 array.
+Calculated -42.7861 in     2.49ms on 2500*2048 array.
+Calculated -42.7861 in     2.48ms on 2560*2000 array.
+Calculated -42.7861 in     2.47ms on 3200*1600 array.
+Calculated -42.7861 in     2.31ms on 4000*1280 array.
+Calculated -42.7861 in     2.29ms on 4096*1250 array.
+Calculated -42.7861 in     2.28ms on 5000*1024 array.
+Calculated -42.7861 in     2.62ms on 5120*1000 array.
+Calculated -42.7861 in     2.77ms on 6400*800 array.
+Calculated -42.7861 in     2.51ms on 8000*640 array.
+Calculated -42.7861 in     3.38ms on 8192*625 array.
+Calculated -42.7861 in     5.28ms on 10000*512 array.
+Calculated -42.7861 in     3.11ms on 10240*500 array.
+Calculated -42.7861 in     2.71ms on 12800*400 array.
+Calculated -42.7861 in     2.65ms on 16000*320 array.
+Calculated -42.7861 in     2.63ms on 20000*256 array.
+Calculated -42.7861 in     2.53ms on 20480*250 array.
+Calculated -42.7861 in     2.49ms on 25600*200 array.
+Calculated -42.7861 in     2.45ms on 32000*160 array.
+Calculated -42.7861 in     2.42ms on 40000*128 array.
+Calculated -42.7861 in     2.46ms on 40960*125 array.
+Calculated -42.7861 in     2.41ms on 51200*100 array.
+Calculated -42.7861 in     2.36ms on 64000*80 array.
+Calculated -42.7861 in     2.32ms on 80000*64 array.
+Calculated -42.7861 in     2.30ms on 102400*50 array.
+Calculated -42.7861 in     2.56ms on 128000*40 array.
+Calculated -42.7861 in     2.71ms on 160000*32 array.
+Calculated -42.7861 in     2.58ms on 204800*25 array.
+Calculated -42.7861 in     2.61ms on 256000*20 array.
+Calculated -42.7861 in     2.42ms on 320000*16 array.
+Calculated -42.7861 in     2.32ms on 512000*10 array.
+Calculated -42.7861 in     2.38ms on 640000*8 array.
+Calculated -42.7861 in     2.37ms on 1024000*5 array.
+Calculated -42.7861 in     2.41ms on 1280000*4 array.
+Calculated -42.7861 in     2.44ms on 2560000*2 array.
+Calculated -42.7861 in     2.41ms on 5120000*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ gcc -Wall -Wpedantic -std=c17 -march=haswell -O3     array-2d.c -o a_col
+
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_col 4096
+Array size: 32kB
+Calculated 1.71216 in     0.01ms on 1*4096 array.
+Calculated 1.71216 in     0.01ms on 2*2048 array.
+Calculated 1.71216 in     0.01ms on 4*1024 array.
+Calculated 1.71216 in     0.02ms on 8*512 array.
+Calculated 1.71216 in     0.01ms on 16*256 array.
+Calculated 1.71216 in     0.01ms on 32*128 array.
+Calculated 1.71216 in     0.01ms on 64*64 array.
+Calculated 1.71216 in     0.01ms on 128*32 array.
+Calculated 1.71216 in     0.01ms on 256*16 array.
+Calculated 1.71216 in     0.01ms on 512*8 array.
+Calculated 1.71216 in     0.01ms on 1024*4 array.
+Calculated 1.71216 in     0.01ms on 2048*2 array.
+Calculated 1.71216 in     0.01ms on 4096*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_col 32768
+Array size: 256kB
+Calculated -53.4191 in     0.06ms on 1*32768 array.
+Calculated -53.4191 in     0.06ms on 2*16384 array.
+Calculated -53.4191 in     0.06ms on 4*8192 array.
+Calculated -53.4191 in     0.06ms on 8*4096 array.
+Calculated -53.4191 in     0.07ms on 16*2048 array.
+Calculated -53.4191 in     0.06ms on 32*1024 array.
+Calculated -53.4191 in     0.06ms on 64*512 array.
+Calculated -53.4191 in     0.06ms on 128*256 array.
+Calculated -53.4191 in     0.06ms on 256*128 array.
+Calculated -53.4191 in     0.06ms on 512*64 array.
+Calculated -53.4191 in     0.06ms on 1024*32 array.
+Calculated -53.4191 in     0.06ms on 2048*16 array.
+Calculated -53.4191 in     0.06ms on 4096*8 array.
+Calculated -53.4191 in     0.06ms on 8192*4 array.
+Calculated -53.4191 in     0.06ms on 16384*2 array.
+Calculated -53.4191 in     0.06ms on 32768*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_col 262144
+Array size: 2048kB
+Calculated 2.17804 in     0.18ms on 1*262144 array.
+Calculated 2.17804 in     0.18ms on 2*131072 array.
+Calculated 2.17804 in     0.18ms on 4*65536 array.
+Calculated 2.17804 in     0.18ms on 8*32768 array.
+Calculated 2.17804 in     0.19ms on 16*16384 array.
+Calculated 2.17804 in     0.18ms on 32*8192 array.
+Calculated 2.17804 in     0.18ms on 64*4096 array.
+Calculated 2.17804 in     0.18ms on 128*2048 array.
+Calculated 2.17804 in     0.18ms on 256*1024 array.
+Calculated 2.17804 in     0.20ms on 512*512 array.
+Calculated 2.17804 in     0.20ms on 1024*256 array.
+Calculated 2.17804 in     0.21ms on 2048*128 array.
+Calculated 2.17804 in     0.20ms on 4096*64 array.
+Calculated 2.17804 in     0.18ms on 8192*32 array.
+Calculated 2.17804 in     0.19ms on 16384*16 array.
+Calculated 2.17804 in     0.18ms on 32768*8 array.
+Calculated 2.17804 in     0.18ms on 65536*4 array.
+Calculated 2.17804 in     0.19ms on 131072*2 array.
+Calculated 2.17804 in     0.19ms on 262144*1 array.
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./a_col 5120000
+Array size: 40000kB
+Calculated -42.7861 in     2.46ms on 1*5120000 array.
+Calculated -42.7861 in     3.69ms on 2*2560000 array.
+Calculated -42.7861 in     5.40ms on 4*1280000 array.
+Calculated -42.7861 in     6.03ms on 5*1024000 array.
+Calculated -42.7861 in     8.21ms on 8*640000 array.
+Calculated -42.7861 in     8.76ms on 10*512000 array.
+Calculated -42.7861 in    12.54ms on 16*320000 array.
+Calculated -42.7861 in     8.83ms on 20*256000 array.
+Calculated -42.7861 in     8.67ms on 25*204800 array.
+Calculated -42.7861 in    16.77ms on 32*160000 array.
+Calculated -42.7861 in     6.78ms on 40*128000 array.
+Calculated -42.7861 in     7.00ms on 50*102400 array.
+Calculated -42.7861 in    15.51ms on 64*80000 array.
+Calculated -42.7861 in     8.75ms on 80*64000 array.
+Calculated -42.7861 in     7.10ms on 100*51200 array.
+Calculated -42.7861 in     6.28ms on 125*40960 array.
+Calculated -42.7861 in    15.43ms on 128*40000 array.
+Calculated -42.7861 in     9.56ms on 160*32000 array.
+Calculated -42.7861 in     5.82ms on 200*25600 array.
+Calculated -42.7861 in     7.15ms on 250*20480 array.
+Calculated -42.7861 in    16.87ms on 256*20000 array.
+Calculated -42.7861 in    12.19ms on 320*16000 array.
+Calculated -42.7861 in    10.23ms on 400*12800 array.
+Calculated -42.7861 in    12.54ms on 500*10240 array.
+Calculated -42.7861 in    26.64ms on 512*10000 array.
+Calculated -42.7861 in    12.55ms on 625*8192 array.
+Calculated -42.7861 in    20.36ms on 640*8000 array.
+Calculated -42.7861 in    12.39ms on 800*6400 array.
+Calculated -42.7861 in    12.81ms on 1000*5120 array.
+Calculated -42.7861 in    28.83ms on 1024*5000 array.
+Calculated -42.7861 in    12.01ms on 1250*4096 array.
+Calculated -42.7861 in    17.63ms on 1280*4000 array.
+Calculated -42.7861 in    12.39ms on 1600*3200 array.
+Calculated -42.7861 in    10.98ms on 2000*2560 array.
+Calculated -42.7861 in    19.94ms on 2048*2500 array.
+Calculated -42.7861 in     5.96ms on 2500*2048 array.
+Calculated -42.7861 in    15.71ms on 2560*2000 array.
+Calculated -42.7861 in     4.45ms on 3200*1600 array.
+Calculated -42.7861 in     3.92ms on 4000*1280 array.
+Calculated -42.7861 in    15.89ms on 4096*1250 array.
+Calculated -42.7861 in     3.28ms on 5000*1024 array.
+Calculated -42.7861 in    18.11ms on 5120*1000 array.
+Calculated -42.7861 in     4.82ms on 6400*800 array.
+Calculated -42.7861 in     3.55ms on 8000*640 array.
+Calculated -42.7861 in    12.23ms on 8192*625 array.
+Calculated -42.7861 in     4.06ms on 10000*512 array.
+Calculated -42.7861 in    12.93ms on 10240*500 array.
+Calculated -42.7861 in     4.19ms on 12800*400 array.
+Calculated -42.7861 in     2.54ms on 16000*320 array.
+Calculated -42.7861 in     3.49ms on 20000*256 array.
+Calculated -42.7861 in     8.14ms on 20480*250 array.
+Calculated -42.7861 in     2.97ms on 25600*200 array.
+Calculated -42.7861 in     2.51ms on 32000*160 array.
+Calculated -42.7861 in     2.24ms on 40000*128 array.
+Calculated -42.7861 in     2.90ms on 40960*125 array.
+Calculated -42.7861 in     2.50ms on 51200*100 array.
+Calculated -42.7861 in     2.34ms on 64000*80 array.
+Calculated -42.7861 in     2.08ms on 80000*64 array.
+Calculated -42.7861 in     2.18ms on 102400*50 array.
+Calculated -42.7861 in     2.19ms on 128000*40 array.
+Calculated -42.7861 in     2.06ms on 160000*32 array.
+Calculated -42.7861 in     2.04ms on 204800*25 array.
+Calculated -42.7861 in     3.12ms on 256000*20 array.
+Calculated -42.7861 in     2.00ms on 320000*16 array.
+Calculated -42.7861 in     1.97ms on 512000*10 array.
+Calculated -42.7861 in     2.21ms on 640000*8 array.
+Calculated -42.7861 in     1.97ms on 1024000*5 array.
+Calculated -42.7861 in     2.01ms on 1280000*4 array.
+Calculated -42.7861 in     2.25ms on 2560000*2 array.
+Calculated -42.7861 in     2.65ms on 5120000*1 array.
+
+
+sla554@asb9700u-d05:~$ lscpu
+Architecture:                x86_64
+  CPU op-mode(s):            32-bit, 64-bit
+  Address sizes:             46 bits physical, 48 bits virtual
+  Byte Order:                Little Endian
+CPU(s):                      32
+  On-line CPU(s) list:       0-31
+Vendor ID:                   GenuineIntel
+  Model name:                Intel(R) Core(TM) i9-14900
+    CPU family:              6
+    Model:                   183
+    Thread(s) per core:      2
+    Core(s) per socket:      24
+    Socket(s):               1
+    Stepping:                1
+    CPU(s) scaling MHz:      18%
+    CPU max MHz:             5800.0000
+    CPU min MHz:             800.0000
+    BogoMIPS:                3993.60
+    Flags:                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pg
+                             e mca cmov pat pse36 clflush dts acpi mmx fxsr sse 
+                             sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm cons
+                             tant_tsc art arch_perfmon pebs bts rep_good nopl xt
+                             opology nonstop_tsc cpuid aperfmperf tsc_known_freq
+                              pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm
+                             2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 
+                             x2apic movbe popcnt tsc_deadline_timer aes xsave av
+                             x f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault
+                              epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow 
+                             flexpriority ept vpid ept_ad fsgsbase tsc_adjust bm
+                             i1 avx2 smep bmi2 erms invpcid rdseed adx smap clfl
+                             ushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1
+                              xsaves split_lock_detect user_shstk avx_vnni dther
+                             m ida arat pln pts hwp hwp_notify hwp_act_window hw
+                             p_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg g
+                             fni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md
+                             _clear serialize pconfig arch_lbr ibt flush_l1d arc
+                             h_capabilities
+Virtualization features:     
+  Virtualization:            VT-x
+Caches (sum of all):         
+  L1d:                       896 KiB (24 instances)
+  L1i:                       1.3 MiB (24 instances)
+  L2:                        32 MiB (12 instances)
+  L3:                        36 MiB (1 instance)
+NUMA:                        
+  NUMA node(s):              1
+  NUMA node0 CPU(s):         0-31
+Vulnerabilities:             
+  Gather data sampling:      Not affected
+  Ghostwrite:                Not affected
+  Indirect target selection: Not affected
+  Itlb multihit:             Not affected
+  L1tf:                      Not affected
+  Mds:                       Not affected
+  Meltdown:                  Not affected
+  Mmio stale data:           Not affected
+  Old microcode:             Not affected
+  Reg file data sampling:    Mitigation; Clear Register File
+  Retbleed:                  Not affected
+  Spec rstack overflow:      Not affected
+  Spec store bypass:         Mitigation; Speculative Store Bypass disabled via p
+                             rctl
+  Spectre v1:                Mitigation; usercopy/swapgs barriers and __user poi
+                             nter sanitization
+  Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditi
+                             onal; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S
+  Srbds:                     Not affected
+  Tsa:                       Not affected
+  Tsx async abort:           Not affected
+  Vmscape:                   Mitigation; IBPB before exit to userspace
+
+
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./tests 
+hailstone_length(1) == 0 == 0
+hailstone_length(5) == 5 == 5
+hailstone_length(20) == 7 == 7
+hailstone_length(123) == 46 == 46
+hailstone_length_cmov(1) == 0 == 0
+hailstone_length_cmov(5) == 5 == 5
+hailstone_length_cmov(20) == 7 == 7
+hailstone_length_cmov(123) == 46 == 46
+
+sla554@asb9700u-d05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ ./timing 
+                   warmup calculated  218020677 in 262 ms
+                   warmup calculated  218020677 in 241 ms
+                   warmup calculated  218020677 in 239 ms
+       hailstone_length_c calculated  218020677 in 240 ms
+         hailstone_length calculated  218020677 in 250 ms
+    hailstone_length_cmov calculated  218020677 in 169 ms
+

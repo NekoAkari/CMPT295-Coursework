@@ -1,0 +1,15 @@
+- 1. 
+For testing:
+	`gcc -Wall -Wpedantic -std=c17 -march=haswell -O3 lab7.S lab7c.c tests.c && ./a.out`
+For timing:
+	`gcc -Wall -Wpedantic -std=c17 -march=haswell -O3 lab7.S lab7c.c timing.c && ./a.out`
+	
+- 2. 
+My timing results were:
+warmup(5) calculated -1599990000000000 in  0.00 ns/elt
+dot(arr1, arr2, LENGTH) calculated      -6482137000 in  0.29 ns/elt
+dot_c(arr1, arr2, LENGTH) calculated      -6482137000 in  0.22 ns/elt
+dot_struct(arr_pair, LENGTH) calculated      -6482137000 in  0.29 ns/elt
+dot_struct_c(arr_pair, LENGTH) calculated      -6482137000 in  0.29 ns/elt
+The C dot function was the fastest. My assembly dot function was a little slower. The assembly struct version and the C struct version were almost the same speed.
+In general, the C compiler optimized the normal array dot product better than my simple assembly loop.

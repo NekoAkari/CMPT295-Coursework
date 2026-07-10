@@ -1,0 +1,8 @@
+- 1. The 4096-element array was 32 KiB, so it fit in the L1 cache. The worst row time was about 0.01 ms. The worst column time was about 0.02 ms. Row access was about 2 times faster. The times were rounded, so this result is only an estimate.
+
+- 2. Column access became slower when the array got larger. It was also less stable. For the 256 KiB array, column access took about 0.06 ms. Row access took about 0.02 ms. For the 2 MiB array, column access took about 0.18–0.21 ms. Row access took about 0.10 ms. For the 40 MiB array, some column times were over 20 ms. The slowest time was about 28.83 ms. Large memory steps caused more cache misses. Some array sizes also caused cache conflicts.
+
+- 3. Yes. The conditional-move version was much faster. The normal assembly version took 254 ms. The conditional-move version took 144 ms. It was about 43.3% faster.
+
+The C version took 243 ms. The conditional-move version was about 40.7% faster than the C version. It was the fastest version.
+
