@@ -58,3 +58,33 @@ Array size: 195 kB
           qsort on random sorted    25000 values in    1.48 ms
       std::sort on random sorted    25000 values in    0.86 ms
 
+sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$  g++ -Wall -Wpedantic -std=c++17 -march=haswell -O1 -g sort.cpp
+sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ perf stat -e branch-misses,branches,br_inst_retired.not_taken ./a.out 20000
+
+ Performance counter stats for './a.out 20000':
+
+        44,066,102      branch-misses                    #    8.79% of all branches           
+       501,602,986      branches                                                              
+       300,975,205      br_inst_retired.not_taken                                             
+
+       0.454786981 seconds time elapsed
+
+       0.450037000 seconds user
+       0.000997000 seconds sys
+
+
+sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$  g++ -Wall -Wpedantic -std=c++17 -march=haswell -O1 -g sort.cpp
+sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ perf stat -e branch-misses,branches,br_inst_retired.not_taken ./a.out 20000
+
+ Performance counter stats for './a.out 20000':
+
+           157,965      branch-misses                    #    0.04% of all branches           
+       401,244,018      branches                                                              
+       200,511,408      br_inst_retired.not_taken                                             
+
+       0.104907873 seconds time elapsed
+
+       0.098387000 seconds user
+       0.001967000 seconds sys
+
+

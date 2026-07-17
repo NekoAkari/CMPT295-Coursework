@@ -180,15 +180,15 @@ int main(int argc, char* argv[]) {
         return 1;
     }
     uint64_t length = atol(argv[1]);
-    printf("Array size: %lu kB\n", length * sizeof(DATA_T) / 1024);
+    // printf("Array size: %lu kB\n", length * sizeof(DATA_T) / 1024);
     
     // Warm up to get the CPU out of a low-power state...
-    just_sort(bubble_sort, length, RANDOM);
-    just_sort(bubble_sort, length, RANDOM);
-    just_sort(bubble_sort, length, RANDOM);
+    // just_sort(bubble_sort, length, RANDOM);
+    // just_sort(bubble_sort, length, RANDOM);
+    just_sort(bubble_sort, length, SORTED);
     
     // The real test...
-    time_them(length);
+    // time_them(length);
 
     return 0;
 }
