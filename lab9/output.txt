@@ -1,0 +1,60 @@
+sla554@ASB9700u-C07:~/sfuhome/CMPT_295/CMPT295-Coursework/lab8$ valgrind ./a.out 10000
+==641842== Memcheck, a memory error detector
+==641842== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==641842== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==641842== Command: ./a.out 10000
+==641842== 
+Array size: 78kB
+Calculated -28.6778 in     0.29ms on 1*10000 array.
+Calculated -28.6778 in     0.10ms on 2*5000 array.
+Calculated -28.6778 in     1.34ms on 4*2500 array.
+Calculated -28.6778 in     0.08ms on 5*2000 array.
+Calculated -28.6778 in     0.08ms on 8*1250 array.
+Calculated -28.6778 in     0.08ms on 10*1000 array.
+Calculated -28.6778 in     0.08ms on 16*625 array.
+Calculated -28.6778 in     0.08ms on 20*500 array.
+Calculated -28.6778 in     0.08ms on 25*400 array.
+Calculated -28.6778 in     0.07ms on 40*250 array.
+Calculated -28.6778 in     0.07ms on 50*200 array.
+Calculated -28.6778 in     0.07ms on 80*125 array.
+Calculated -28.6778 in     0.07ms on 100*100 array.
+Calculated -28.6778 in     0.07ms on 125*80 array.
+Calculated -28.6778 in     0.08ms on 200*50 array.
+Calculated -28.6778 in     0.08ms on 250*40 array.
+Calculated -28.6778 in     0.08ms on 400*25 array.
+Calculated -28.6778 in     0.08ms on 500*20 array.
+Calculated -28.6778 in     0.08ms on 625*16 array.
+Calculated -28.6778 in     0.08ms on 1000*10 array.
+Calculated -28.6778 in     0.08ms on 1250*8 array.
+Calculated -28.6778 in     0.08ms on 2000*5 array.
+Calculated -28.6778 in     0.08ms on 2500*4 array.
+Calculated -28.6778 in     0.09ms on 5000*2 array.
+Calculated -28.6778 in     0.10ms on 10000*1 array.
+==641842== 
+==641842== HEAP SUMMARY:
+==641842==     in use at exit: 0 bytes in 0 blocks
+==641842==   total heap usage: 6 allocs, 6 frees, 81,088 bytes allocated
+==641842== 
+==641842== All heap blocks were freed -- no leaks are possible
+==641842== 
+==641842== For lists of detected and suppressed errors, rerun with: -s
+==641842== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+sla554@ASB9700u-C07:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ g++ -Wall -Wpedantic -std=c++17 -march=haswell -O3 sort.cpp -o sort
+sla554@ASB9700u-C07:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ ./sort 25000
+Array size: 195 kB
+    bubble_sort on sorted sorted    25000 values in   88.57 ms
+   bubble_sort on reverse sorted    25000 values in  123.00 ms
+    bubble_sort on random sorted    25000 values in  428.30 ms
+          qsort on random sorted    25000 values in    1.49 ms
+      std::sort on random sorted    25000 values in    0.82 ms
+
+sla554@ASB9700u-C07:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ g++ -Wall -Wpedantic -std=c++17 -march=haswell -O2 sort.cpp -o sort
+sla554@ASB9700u-C07:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ ./sort 25000
+Array size: 195 kB
+    bubble_sort on sorted sorted    25000 values in   88.81 ms
+   bubble_sort on reverse sorted    25000 values in  122.93 ms
+    bubble_sort on random sorted    25000 values in  428.01 ms
+          qsort on random sorted    25000 values in    1.48 ms
+      std::sort on random sorted    25000 values in    0.86 ms
+
