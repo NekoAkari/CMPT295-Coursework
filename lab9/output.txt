@@ -88,3 +88,67 @@ sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ perf stat -e br
        0.001967000 seconds sys
 
 
+sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ perf stat \
+-e L1-dcache-load-misses,L1-dcache-loads,LLC-load-misses,LLC-loads \
+./a.out 80000000 1
+Array size: 625000 kB
+Calculated 2341.98 in    81.41 ms on 80000000*1 array.
+
+ Performance counter stats for './a.out 80000000 1':
+
+        21,915,222      L1-dcache-load-misses            #    1.11% of all L1-dcache accesses 
+     1,982,620,754      L1-dcache-loads                                                       
+           498,317      LLC-load-misses                  #   76.61% of all LL-cache accesses  
+           650,484      LLC-loads                                                             
+
+       1.251191427 seconds time elapsed
+
+       1.066141000 seconds user
+       0.183024000 seconds sys
+
+
+sla554@asb9838nu-a05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab9$ perf stat \
+-e L1-dcache-load-misses,L1-dcache-loads,LLC-load-misses,LLC-loads \
+./a.out 80000000 10000
+Array size: 625000 kB
+Calculated 2341.98 in   511.15 ms on 8000*10000 array.
+
+ Performance counter stats for './a.out 80000000 10000':
+
+       172,655,526      L1-dcache-load-misses            #    8.70% of all L1-dcache accesses 
+     1,984,242,919      L1-dcache-loads                                                       
+        16,766,248      LLC-load-misses                  #   12.85% of all LL-cache accesses  
+       130,464,407      LLC-loads                                                             
+
+       1.672438910 seconds time elapsed
+
+       1.495438000 seconds user
+       0.175051000 seconds sys
+       
+----------
+
+         0                0                 0          DATA_T sum_array_col(DATA_T* array, uint64_t width, uint64_t height) {
+         0                0                 0              DATA_T total = 0;
+         .                .                 .          
+         0                0                 0              for (uint64_t col = 0; col < width; col ++) {
+         0                0                 0                  for (uint64_t row = 0; row < height; row ++) {
+ 8,000,000 (4.3%) 1,000,001 (99.9%) 1,000,001 (99.9%)              total += array[row * width + col];
+         .                .                 .                  }
+         .                .                 .              }
+         .                .                 .          
+         .                .                 .              return total;
+         1 (0.0%)         1  (0.0%)         1  (0.0%)  }
+
+
+         0                0                0          DATA_T sum_array_col(DATA_T* array, uint64_t width, uint64_t height) {
+         0                0                0              DATA_T total = 0;
+         .                .                .          
+         0                0                0              for (uint64_t col = 0; col < width; col ++) {
+         0                0                0                  for (uint64_t row = 0; row < height; row ++) {
+ 8,000,000 (4.3%) 8,000,000 (100.0%) 991,685 (99.9%)              total += array[row * width + col];
+         .                .                .                  }
+         .                .                .              }
+         .                .                .          
+         .                .                .              return total;
+         1 (0.0%)         1   (0.0%)       1  (0.0%)  }
+

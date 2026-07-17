@@ -1,0 +1,54 @@
+- 1. Yes. Valgrind reported "All heap blocks were freed -- no leaks are possible."
+
+- 2. Based on my timing results, approximately 21% of the random-array
+running time was spent on the loops and comparisons, approximately 4%
+was spent swapping values, and approximately 75% was caused by branch
+mispredictions.
+
+- 3. I ran bubble_sort on a random array of 20000 elements and on an
+already-sorted array of 20000 elements. I compiled the program using
+-O1 and -g, then measured branches and branch misses using perf stat.
+
+- 4. For the random array, Perf reported 44,066,102 branch misses.
+Compared with 199,990,000 executions of the if statement, this is
+approximately 22.0%.
+
+For the sorted array, Perf reported 157,965 branch misses, which is
+approximately 0.079%.
+
+Perf annotate showed that essentially all sampled branch misses inside
+bubble_sort occurred at the conditional jump generated for the if
+statement. This supports the hypothesis that random input causes many
+more branch mispredictions.
+
+- 5. With Perf, increasing the array height from 1 to 10000 increased
+the L1 data-cache load misses from 21,915,222 to 172,655,526, which
+is about 7.9 times more.
+
+The LLC load misses increased from 498,317 to 16,766,248, which is
+about 33.6 times more. The time for sum_array_col increased from
+81.41 ms to 511.15 ms.
+
+This matched my expectations. With a larger height, the by-column
+accesses are farther apart in memory, so spatial locality is worse
+and more cache misses occur. Perf annotate showed that almost all
+L1 cache-miss samples in sum_array_col occurred at the instruction
+that reads an array value.
+
+- 6. Cachegrind showed that with height 1, the array-reading line had
+8,000,000 data reads and 1,000,001 L1 data-cache read misses.
+
+With height 10000, it still had 8,000,000 data reads, but the number
+of L1 data-cache read misses increased to 8,000,000. This means that
+almost every array access missed in L1 cache.
+
+This matched my expectations. With height 1, the accesses are
+contiguous, and each 64-byte cache line contains about eight doubles.
+Therefore, approximately one out of every eight reads misses in L1.
+With height 10000, the accesses are far apart in memory, so nearly
+every read needs a different cache line.
+
+The last-level cache misses stayed near one million in both tests:
+1,000,001 for height 1 and 991,685 for height 10000.
+
+

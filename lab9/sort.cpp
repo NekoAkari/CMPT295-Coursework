@@ -185,7 +185,7 @@ int main(int argc, char* argv[]) {
     // Warm up to get the CPU out of a low-power state...
     // just_sort(bubble_sort, length, RANDOM);
     // just_sort(bubble_sort, length, RANDOM);
-    just_sort(bubble_sort, length, SORTED);
+    just_sort(bubble_sort, length, RANDOM);
     
     // The real test...
     // time_them(length);
