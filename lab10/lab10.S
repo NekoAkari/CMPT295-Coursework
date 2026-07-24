@@ -80,7 +80,7 @@ map_poly_single:
 
 	movss (%rdi, %rcx, 4), %xmm4	# xmm4 = x = input[i]
 
-	movss %xmm0, %xmm5		# xmm5 = a
+	movaps %xmm0, %xmm5		# xmm5 = a
 	mulss %xmm4, %xmm5		# xmm5 = a*x
 	addss %xmm1, %xmm5		# xmm5 = a*x + b
 

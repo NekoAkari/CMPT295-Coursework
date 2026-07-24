@@ -1,39 +1,41 @@
+sla554@asb9700u-b05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab10$ gcc -Wall -Wextra -std=c17 -march=haswell -O3 lab10c.c lab10.S timing.c -o timing
 sla554@asb9700u-b05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab10$ ./timing 
                    warmup took    26.3 ms
-                   warmup took    26.1 ms
-             dot_double_c took    26.8 ms
+                   warmup took    26.3 ms
+             dot_double_c took    26.1 ms
                dot_double took    26.3 ms
              dot_single_c took    17.4 ms
                dot_single took    17.5 ms
-       map_poly_double_c1 took    35.3 ms
+       map_poly_double_c1 took    35.4 ms
        map_poly_double_c2 took    36.1 ms
           map_poly_double took    38.7 ms
-        map_poly_single_c took    17.9 ms
-          map_poly_single took    96.0 ms
-sla554@asb9700u-b05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab10$ ./timing 
-                   warmup took    26.2 ms
-                   warmup took    26.3 ms
-             dot_double_c took    26.2 ms
-               dot_double took    26.3 ms
-             dot_single_c took    17.4 ms
-               dot_single took    17.6 ms
-       map_poly_double_c1 took    35.4 ms
-       map_poly_double_c2 took    36.3 ms
-          map_poly_double took    38.8 ms
         map_poly_single_c took    18.0 ms
-          map_poly_single took    96.0 ms
+          map_poly_single took    22.3 ms
 sla554@asb9700u-b05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab10$ ./timing 
-                   warmup took    26.3 ms
+                   warmup took    26.1 ms
                    warmup took    26.2 ms
-             dot_double_c took    26.1 ms
+             dot_double_c took    26.2 ms
                dot_double took    26.5 ms
              dot_single_c took    17.4 ms
-               dot_single took    17.6 ms
-       map_poly_double_c1 took    35.4 ms
-       map_poly_double_c2 took    36.1 ms
+               dot_single took    17.5 ms
+       map_poly_double_c1 took    35.3 ms
+       map_poly_double_c2 took    36.0 ms
           map_poly_double took    38.8 ms
+        map_poly_single_c took    17.9 ms
+          map_poly_single took    22.4 ms
+sla554@asb9700u-b05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab10$ ./timing 
+                   warmup took    26.2 ms
+                   warmup took    26.1 ms
+             dot_double_c took    26.0 ms
+               dot_double took    26.5 ms
+             dot_single_c took    17.4 ms
+               dot_single took    17.5 ms
+       map_poly_double_c1 took    35.3 ms
+       map_poly_double_c2 took    36.0 ms
+          map_poly_double took    38.6 ms
         map_poly_single_c took    18.0 ms
-          map_poly_single took    96.0 ms
+          map_poly_single took    22.3 ms
+          
 
 sla554@asb9700u-b05:~/sfuhome/CMPT_295/CMPT295-Coursework/lab10$ ./sin_test 
 First five results:

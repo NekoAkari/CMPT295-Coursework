@@ -1,0 +1,21 @@
+- 1. Dot product
+For double precision, both the C and assembly versions took about 26.37 ms. There was almost no speed difference between them.
+For single precision, the C version took 17.40 ms and the assembly version took 17.57 ms. The assembly version was only about 1% slower.
+The single-precision versions were about 1.5 times faster than the double-precision versions. One possible reason is that a float uses four bytes, while a double uses eight bytes, so the single-precision version needs to read less data from memory.
+
+- 2. Polynomial evaluation
+The double-precision results were:
+map_poly_double_c1: 35.37 ms
+map_poly_double_c2: 36.17 ms
+map_poly_double: 38.77 ms
+My assembly version was about 9.6% slower than c1 and 7.2% slower than c2.
+
+The single-precision results were:
+map_poly_single_c: 17.97 ms
+map_poly_single: 22.30 ms
+My assembly version was about 24% slower than the C version. However, both single-precision versions were faster than the double-precision versions. These results show that the compiler produced very efficient code for the polynomial loop.
+
+- 3. x87 sine calculation
+The x87 version took about 111.71 ms, while the C standard-library version took about 16.01 ms.
+The x87 version was about 6.98 times slower than the C version. Therefore, using the fsin instruction did not make the calculation faster on this computer.
+The maximum difference between their results was about 1.11 × 10^-16, so both versions produced almost the same answers.
