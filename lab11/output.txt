@@ -96,3 +96,97 @@ sla554@asb9700u-b06:~/sfuhome/CMPT_295/CMPT295-Coursework/lab11$ ./timing
        map_poly_single_vc took    10.9 ms
 sla554@asb9700u-b06:~/sfuhome/CMPT_295/CMPT295-Coursework/lab11$ 
 
+  ~/De/CMPT295-Coursework/lab11 on   main ?2 ❯ ./timing-1                                             at  16:36:53
+                   warmup took    12.7 ms
+                   warmup took    12.7 ms
+             dot_double_c took    12.6 ms
+               dot_double took    13.4 ms
+           dot_double_vec took     9.7 ms
+            dot_double_vc took     9.3 ms
+
+             dot_single_c took     8.1 ms
+               dot_single took     8.2 ms
+           dot_single_vec took     4.7 ms
+            dot_single_vc took     4.5 ms
+
+       map_poly_double_c1 took    17.5 ms
+       map_poly_double_c2 took    16.9 ms
+          map_poly_double took    18.9 ms
+      map_poly_double_vec took    16.9 ms
+       map_poly_double_vc took    17.1 ms
+
+        map_poly_single_c took     8.8 ms
+          map_poly_single took    11.2 ms
+      map_poly_single_vec took     8.7 ms
+       map_poly_single_vc took     9.4 ms
+  ~/De/CMPT295-Coursework/lab11 on   main ?2 ❯ ./timing-1                                             at  16:37:00
+                   warmup took    11.3 ms
+                   warmup took    11.3 ms
+             dot_double_c took    11.3 ms
+               dot_double took    11.4 ms
+           dot_double_vec took     9.9 ms
+            dot_double_vc took     9.3 ms
+
+             dot_single_c took     8.2 ms
+               dot_single took     8.5 ms
+           dot_single_vec took     5.0 ms
+            dot_single_vc took     4.5 ms
+
+       map_poly_double_c1 took    19.3 ms
+       map_poly_double_c2 took    18.0 ms
+          map_poly_double took    20.1 ms
+      map_poly_double_vec took    18.3 ms
+       map_poly_double_vc took    18.0 ms
+
+        map_poly_single_c took     9.6 ms
+          map_poly_single took    11.2 ms
+      map_poly_single_vec took     9.3 ms
+       map_poly_single_vc took     9.3 ms
+  ~/De/CMPT295-Coursework/lab11 on   main ?2 ❯ ./timing-1                                             at  16:37:06
+                   warmup took    11.2 ms
+                   warmup took    11.3 ms
+             dot_double_c took    11.2 ms
+               dot_double took    11.4 ms
+           dot_double_vec took     9.5 ms
+            dot_double_vc took     9.3 ms
+
+             dot_single_c took     8.1 ms
+               dot_single took     8.1 ms
+           dot_single_vec took     4.7 ms
+            dot_single_vc took     4.6 ms
+
+       map_poly_double_c1 took    17.6 ms
+       map_poly_double_c2 took    16.9 ms
+          map_poly_double took    19.3 ms
+      map_poly_double_vec took    16.9 ms
+       map_poly_double_vc took    17.4 ms
+
+        map_poly_single_c took     8.5 ms
+          map_poly_single took    11.3 ms
+      map_poly_single_vec took     8.6 ms
+       map_poly_single_vc took     9.5 ms
+  ~/De/CMPT295-Coursework/lab11 on   main ?2 ❯ ./timing                                               at  16:37:11
+                   warmup took    12.8 ms
+                   warmup took    12.7 ms
+             dot_double_c took    11.3 ms
+               dot_double took    11.4 ms
+           dot_double_vec took     9.6 ms
+            dot_double_vc took     9.3 ms
+
+             dot_single_c took     8.2 ms
+               dot_single took     8.2 ms
+           dot_single_vec took     4.6 ms
+            dot_single_vc took     4.7 ms
+
+       map_poly_double_c1 took    17.5 ms
+       map_poly_double_c2 took    17.1 ms
+          map_poly_double took    19.2 ms
+      map_poly_double_vec took    16.8 ms
+       map_poly_double_vc took    17.2 ms
+
+        map_poly_single_c took     8.7 ms
+          map_poly_single took    11.0 ms
+      map_poly_single_vec took     8.5 ms
+       map_poly_single_vc took     9.6 ms
+
+
