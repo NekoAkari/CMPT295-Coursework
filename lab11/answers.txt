@@ -1,0 +1,9 @@
+
+- 1. Using the average of three runs, the double-precision dot product improved from 13.47 ms to 11.17 ms, which is a 1.21x speedup. The single-precision dot product improved from 8.83 ms to 5.60 ms, which is a 1.58x speedup.
+The double-precision polynomial implementation improved from 20.63 ms to 18.50 ms, which is a 1.12x speedup. The single-precision polynomial implementation improved from 11.63 ms to 9.30 ms, which is a 1.25x speedup.
+
+- 2. For the assembly vector implementations, single precision was about 1.99x faster than double precision for both the dot product and polynomial problems.
+For the Vectorclass implementations, single precision was about 2.06x faster for the dot product and 1.88x faster for the polynomial problem. A 256-bit vector can hold eight floats but only four doubles, so single precision can process twice as many values at once.
+
+- 3. The dot product has a dependency between loop iterations because each iteration adds to the same running total. Changing the order of floating-point additions can change the rounding result, so the compiler cannot safely vectorize it with normal -O3 optimization.
+The polynomial problem has no dependency between different loop iterations. Each output value can be calculated independently. The restrict keyword also helps the compiler know that the input and output arrays do not overlap. Therefore, the compiler can safely vectorize the polynomial implementation.

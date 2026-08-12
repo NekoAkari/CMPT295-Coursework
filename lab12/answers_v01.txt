@@ -1,0 +1,20 @@
+- 1. Without optimization, n and is_even are stored on the stack.
+At -O1, n stays in a register, and is_even is optimized away.
+The compiler directly tests the low bit of n to determine whether it is even.
+
+- 2. At -O2, GCC calculates 3*n+1 with an lea instruction instead of a multiplication instruction.
+
+- 3. At -O2, GCC removes the recursive calls and converts hailstone_length into a loop.
+It also combines some hailstone steps together.
+
+- 4. map_poly_single_c is fully vectorized at -O3.
+Its main loop uses YMM registers and packed instructions such as vmulps and vaddps.
+dot_single_c uses SIMD for the multiplications with vmulps, but the results are added with scalar vaddss instructions.
+The compiler keeps the floating-point addition order instead of using a parallel SIMD reduction.
+
+- 5. With -funsafe-math-optimizations, both functions use packed FMA instructions.
+dot_single_c can now accumulate values in parallel, while map_poly_single_c uses fewer instructions by combining multiplication and addition.
+
+- 6. -funsafe-math-optimizations greatly improved the C dot product.
+dot_single_c changed from 8.1 ms to 4.8 ms and became about as fast as the hand-written SIMD and VectorClass versions.
+The polynomial performance changed very little because it was already vectorized at -O3.
